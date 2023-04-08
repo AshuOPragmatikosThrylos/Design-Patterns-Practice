@@ -1,3 +1,5 @@
+import Interfaces.FunctionalityInterface;
+
 public class NormalFunctionality implements FunctionalityInterface {
 
     public void functionality() {

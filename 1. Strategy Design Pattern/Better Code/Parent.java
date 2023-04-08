@@ -1,3 +1,5 @@
+import Interfaces.FunctionalityInterface;
+
 public class Parent {
 
     FunctionalityInterface obj;

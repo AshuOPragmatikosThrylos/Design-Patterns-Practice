@@ -1,3 +1,5 @@
+import Interfaces.FunctionalityInterface;
+
 public class Child extends Parent {
 
     Child(FunctionalityInterface obj) {
