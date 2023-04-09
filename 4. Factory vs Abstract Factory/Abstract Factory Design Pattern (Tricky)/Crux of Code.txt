@@ -1,0 +1,9 @@
+Entities involved :-
+1. FactoryOfFactoryInterface
+    -- contains functions like
+           Object createObject1();
+           Object createObject2();
+
+    -- Note: it is not interface of interfaces instead directly create object of the lowest level
+2. Factory1, Factory2 classes which implement FactoryOfFactoryInterface
+3. A separate class which has conditional logic to create factory, object depending on factoryType, objectType entered by user 
