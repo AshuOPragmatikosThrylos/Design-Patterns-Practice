@@ -1,13 +1,14 @@
-import Interfaces.FactoryOfFactoryInterface;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        FactoryOfFactoryInterface factory1 = new Factory1();
-        Client client1 = new Client(factory1);
-        client1.execute();
+        Scanner scn = new Scanner(System.in);
+        int factoryType = scn.nextInt();
+        int objectType = scn.nextInt();
 
-        FactoryOfFactoryInterface factory2 = new Factory2();
-        Client client2 = new Client(factory2);
-        client2.execute();
+        AbstractFactory abstractFactory = new AbstractFactory();
+        abstractFactory.getObject(factoryType, objectType);
+
+        scn.close();
     }
 }
