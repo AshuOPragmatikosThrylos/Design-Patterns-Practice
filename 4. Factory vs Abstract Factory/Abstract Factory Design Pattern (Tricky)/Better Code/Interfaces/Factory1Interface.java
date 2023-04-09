@@ -1,5 +1,5 @@
 package Interfaces;
 
-public interface ProductA {
+public interface Factory1Interface {
     void performAction();
 }

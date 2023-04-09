@@ -1,16 +1,16 @@
 import Interfaces.*;
 
 public class Client {
-    private ProductA productA;
-    private ProductB productB;
+    private Factory1Interface factory1;
+    private Factory2Interface factory2;
 
-    public Client(FactoryOfFactory factory) {
-        productA = factory.createProductA();
-        productB = factory.createProductB();
+    public Client(FactoryOfFactoryInterface factory) {
+        factory1 = factory.createFactory1();
+        factory2 = factory.createFactory2();
     }
 
     public void execute() {
-        productA.performAction();
-        productB.performAnotherAction();
+        factory1.performAction();
+        factory2.performAction();
     }
 }
