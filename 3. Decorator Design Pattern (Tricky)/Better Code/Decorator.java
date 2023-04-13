@@ -1,9 +1,9 @@
-import Interfaces.BaseInterface;
+import Interfaces.BaseTypeInterface;
 
-public abstract class Decorator implements BaseInterface { // decorator is-a base
-    protected BaseInterface base; // decorator has-a base
+public abstract class Decorator implements BaseTypeInterface { // decorator is-a base
+    protected BaseTypeInterface base; // decorator has-a base
 
-    public Decorator(BaseInterface base) {
+    public Decorator(BaseTypeInterface base) {
         this.base = base;
     }
 

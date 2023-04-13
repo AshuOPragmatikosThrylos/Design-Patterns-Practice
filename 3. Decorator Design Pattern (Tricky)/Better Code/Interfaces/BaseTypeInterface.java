@@ -1,6 +1,6 @@
 package Interfaces;
 
-public interface BaseInterface {
+public interface BaseTypeInterface {
     void operation();
 }
 

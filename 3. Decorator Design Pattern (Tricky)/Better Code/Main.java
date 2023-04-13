@@ -1,8 +1,8 @@
-import Interfaces.BaseInterface;
+import Interfaces.BaseTypeInterface;
 
 public class Main {
     public static void main(String[] args) {
-        BaseInterface base = new BaseType1();
+        BaseTypeInterface base = new BaseType1();
         base.operation();
         System.out.println();
 

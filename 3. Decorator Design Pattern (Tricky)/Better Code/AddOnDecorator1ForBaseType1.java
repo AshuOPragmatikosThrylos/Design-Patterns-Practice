@@ -1,7 +1,7 @@
-import Interfaces.BaseInterface;
+import Interfaces.BaseTypeInterface;
 
 public class AddOnDecorator1ForBaseType1 extends Decorator {
-    public AddOnDecorator1ForBaseType1(BaseInterface base) {
+    public AddOnDecorator1ForBaseType1(BaseTypeInterface base) {
         super(base);
     }
 
