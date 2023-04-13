@@ -2,15 +2,15 @@ import Interfaces.BaseInterface;
 
 public class Main {
     public static void main(String[] args) {
-        BaseInterface base1 = new ConcreteClassA();
+        BaseInterface base1 = new BaseType1();
         base1.operation();
         System.out.println();
 
-        AddOnCombination1ForClassA addOnCombination1ForClassA = new AddOnCombination1ForClassA();
+        AddOnCombination1ForBaseType1 addOnCombination1ForClassA = new AddOnCombination1ForBaseType1();
         addOnCombination1ForClassA.additionalOperation();
         System.out.println();
 
-        AddOnCombination12ForClassA addOnCombination2ForClassA = new AddOnCombination12ForClassA(); // not using already formed object of AddOnCombination1ForClassA to make object of AddOnCombination12ForClassA
+        AddOnCombination12ForBaseType1 addOnCombination2ForClassA = new AddOnCombination12ForBaseType1(); // not using already formed object of AddOnCombination1ForBaseType1 to make object of AddOnCombination12ForBaseType1
         addOnCombination2ForClassA.additionalOperation();
 
 
