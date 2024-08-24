@@ -1,4 +1,3 @@
-Proxy
 Adapter
 Singleton
 Facade
