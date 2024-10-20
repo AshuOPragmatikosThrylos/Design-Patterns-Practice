@@ -1,4 +1,3 @@
-Singleton
 Facade
 Builder
 Bridge
