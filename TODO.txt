@@ -1,4 +1,6 @@
-Facade
 Builder
 Bridge
+Iterator
+Composite
+Prototype
 
