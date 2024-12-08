@@ -1,0 +1,2 @@
+Used when 
+ - we want instances of different classes depending on some conditional logic
