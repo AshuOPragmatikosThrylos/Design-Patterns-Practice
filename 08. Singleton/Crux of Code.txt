@@ -1,0 +1,19 @@
+Source: Code Decode (Youtube)
+1. https://youtu.be/dQV6BeAlBvI?feature=shared
+2. https://youtu.be/p4UbfBRpke0?feature=shared
+
+3. https://blog.algomaster.io/p/singleton-design-pattern
+
+4, https://youtu.be/vap9ACtc_tU?feature=shared
+5. https://github.com/shabbirdwd53/design_patterns
+
+- The Enum Singleton pattern is a robust and concise way to implement a singleton in Java but isn't suitable if class extension or strict lazy initialization is required
+
+- The Bill Pugh Singleton offers a balance of lazy initialization, thread safety, and performance, avoiding the complexities of patterns like double-checked locking
+
+Breaking Singleton Design Pattern
+-------------------------------------
+1. Reflection API: Accesses private constructors at runtime. Solution: use EnumSingleton
+2. Serialization: Creates new instances during deserialization. Solution: implement readResolve()
+3. Cloneable Interface: Allows cloning of the singleton object. Solution: Override clone() and throw CloneNotSupportedException
+4. Thread Executors: Improper synchronization leads to multiple instances. Solution: Use Bill Pugh Singleton or Double-Checked Locking with proper synchronization

@@ -1,0 +1,30 @@
+Proxy --> client's imposter (server will think proxy is the actual client)
+
+Entities involved :-
+1. Subject Interface
+2. RealSubject, Proxy both of which implement Subject
+
+3. Instead of RealSubject.fn() use Proxy.fn()
+4. Proxy.fn() should call RealSubject.fn() and have some additional logic around it
+
+
+used when?
+1) caching
+2) for blacklisting certain requests (access restriction)
+3) pre processing and post processing (logging, publish event)
+4) marshalling and unmarshalling (serialize and deserialize requests and responses)
+5) lazy loading/initialisation 
+
+public class LazyInitializedObject {
+    private Object heavyObject; // Declared but not initialized
+
+    public Object getHeavyObject() {
+        if (heavyObject == null) { // Check if the object is already created
+            heavyObject = new Object(); // Initialize only when needed
+        }
+        return heavyObject;
+    }
+}
+
+
+

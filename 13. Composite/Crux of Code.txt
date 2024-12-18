@@ -1,0 +1,32 @@
+composite - object inside object
+
+any problem which can be designed using trees/recursion
+can be solved using
+1) instance of (Problematic Code)
+2) composite DP (Better Code)
+
+
+Examples (Refer LLD Problems)
+1. Design File System (https://github.com/AshuOPragmatikosThrylos/LLD-Problems/tree/main/10.%20Design%20File%20System)
+2. Design Calculator (Arithmetic Expression) (https://github.com/AshuOPragmatikosThrylos/LLD-Problems/tree/main/11.%20Design%20Arithmetic%20Expression)
+
+File System (a directory can contain a file or another directory)
+-----------
+|
+| Directory
+  \| Directory
+     \| Directory
+     \| File
+  \| File
+| File
+
+UML (Directory has a File System)
+
+
+                               --------------------------------------
+                              |                                      |   
+                         File System                                 |
+               is-a         |   |        is-a                        |
+         -------------------     -----------------------             |
+        |                                               |     has-a  |
+        File                                       Directory --------

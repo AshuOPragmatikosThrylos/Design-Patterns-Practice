@@ -1,0 +1,21 @@
+Aggregate interface
+1) createIterator() - returns Iterator (no complex logic just does return new IteratorImpl())
+
+Iterator interface
+1) hasNext()
+2) next()
+
+
+AggregateImpl - has collection over which to iterate
+IteratorImpl - iterates over the collection passed by the AggregateImpl through below
+
+AggregateImpl
+--------------
+Iterator createIterator() {
+    return new IteratorImpl(collection);
+}
+
+
+Example
+1) Library has List<Book>
+2) it invokes BookIterator

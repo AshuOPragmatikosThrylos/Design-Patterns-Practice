@@ -1,0 +1,10 @@
+State
+Flyweight
+Command
+Mediator
+Visitor
+Memento
+Interpreter
+MVC
+
+

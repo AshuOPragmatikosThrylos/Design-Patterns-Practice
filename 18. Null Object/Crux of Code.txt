@@ -1,0 +1,6 @@
+used when have to prevent NPE without having to use not-null checks everywhere
+instead of returning null, it returns a special Null Object that represents a "do-nothing" or "default behavior"
+
+Cons:
+1. memory overhead
+2. default implementation might hide bugs if logging or behavior is accidentally omitted

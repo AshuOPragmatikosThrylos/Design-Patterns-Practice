@@ -1,0 +1,22 @@
+abstract class has
+1) an interface objectReference
+2) and a constructor for thar object Reference
+3 and an abstract method of course
+
+But why?
+so that 
+1) abstract class can have N number of subclass
+and 2) the interface can have n number of implementations
+3) and subclasses and implementations are not tightly coupled and each can grow in number independently
+
+
+how is bridge different from strategy
+- it's practically the same
+- except that in strategy we don't expect class which has interface objectReference to be inherited by n number of subclasses
+
+Example
+1) video - youtube video,prime video, netflix video
+2) resolution - 360p, 480p, HD, 4K
+Both can grow independently
+
+https://youtu.be/7pvhfHN1zY0?feature=shared
