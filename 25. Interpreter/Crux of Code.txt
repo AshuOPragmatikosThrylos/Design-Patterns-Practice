@@ -1,0 +1,39 @@
+used when have to separate the grammar rules (expressions) and their interpretation logic
+  - mainly for reusability of expressions
+  - brings in some extensability but only as long as the grammar is not too complex
+
+Entities Involved
+1) ExpressionInterface
+2) NonTerminalExpressionImpl
+3) TerminalExpressionImpl
+
+Without the Interpreter Pattern: 
+1) The evaluation logic for all rules is centralized in one class or method (RuleEvaluator.evaluate())
+2) Adding new rules requires modifying the evaluate() method, violating the Open-Closed Principle
+3) Harder to compose rules into complex expressions
+
+With the Interpreter Pattern: 
+1) The evaluation logic is distributed into multiple reusable classes (e.g., AndExpression, OrExpression, etc.), each responsible for interpreting a specific type of rule
+2) Adding new rules means creating new classes for the rules, leaving existing code untouched
+3) Expressions can be composed recursively, allowing for complex rules
+
+https://www.baeldung.com/java-interpreter-pattern
+https://www.geeksforgeeks.org/interpreter-design-pattern/
+
+
+
+how is interpreter different from composite
+- similar code --> Sometype object = new Sometype (new Sometype, new Sometype)
+- We didn’t create design patterns first and then fit problems into them.
+  Instead we observed recurring problems and distilled patterns from them
+
+  So, the real question isn’t whether to use Interpreter or Composite. The question is:
+  Does the code we wrote (hopefully extensible and reusable) align with the Interpreter or Composite pattern?
+
+  Although they look similar at first glance (both deal with tree-like structures):
+    -- Composite: Focuses on part-whole hierarchies
+        --- May include logic (e.g., arithmetic expression evaluation)
+        --- Or may not have logic at all (e.g., file systems)
+    -- Interpreter: Always includes logic to evaluate or interpret expressions
+
+- Key Takeaway: Composite organizes (structural), Interpreter evaluates (behavioral)

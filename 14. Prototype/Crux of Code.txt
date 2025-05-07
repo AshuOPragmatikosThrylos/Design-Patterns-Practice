@@ -1,0 +1,25 @@
+- Used for creating a copy/clone of an object instead of building it from scratch, which might be resource-intensive  
+- When to use: Objects with many fields/configurations; cloning as an alternative to subclassing 
+
+### Cloning Approach
+- `clone.field = original.field` 
+- Issues:  
+  1. Private fields inaccessible
+  2. Many instance variables make manual assignment tedious 
+
+### Key Principle  
+- Cloning should be the responsibility of the original class, not the client
+
+### Prototype Interface
+- Ensures all classes have a consistent name for cloning method (e.g., `clone`)
+- Allow additional methods specific to cloning behavior (such as cloning with certain parameters or deep cloning) if needed in more complex scenarios
+
+Cloneable` interface over custom Prototype interface
+- If we only need basic cloning, using Cloneable directly is simpler
+- The Prototype interface is needed when we require more control over cloning or want a contract for cloning across multiple classes
+
+### Prototype Registry  
+- Provides quick access to prototypes for cloning
+
+
+https://youtu.be/rriiXRdc0HQ?feature=shared

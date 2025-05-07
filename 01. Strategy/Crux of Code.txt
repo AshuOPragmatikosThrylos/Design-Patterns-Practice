@@ -1,0 +1,4 @@
+Different strategies/options for a thing should be implemented by -
+
+1) having an interface for the thing
+2) having different implementations in several different classes which implement the above interface

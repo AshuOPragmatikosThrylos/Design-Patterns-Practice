@@ -1,0 +1,13 @@
+facade == abstraction wrapper
+
+used when:
+1. expose limited system functions to client
+2. combine functions into one for the client
+3. merge facades into one for the client
+
+Difference between Facade and Adapter
+ - Facade unifies interfaces; Adapter converts one interface into another
+
+Difference between Facade and Proxy
+ 1. Facade simplifies interaction with a subsystem; Proxy controls access to an object
+ 2. Facade doesn’t manage access; Proxy adds behavior

@@ -1,0 +1,42 @@
+used when:
+1.too many class members and want to avoid constructors with many parameters
+2.optional class members and want to avoid creating multiple constructors
+
+Entities involved:
+1. Product
+2. Builder abstract and concrete class
+3. Director/Client
+
+Client/Director has --> builder
+builder includes/excludes a step under the supervision of client/Director
+builder can be of different types, so they extend an abstract class (not interface)
+builder abstract class has --> product
+
+
+class Director {
+    private Builder builder;
+
+    public Director1(Builder builder) { this.builder = builder; }
+
+    public Product construct() {
+        return builder
+               .buildPartA()  // exclude partB
+               .build();
+    }
+}
+
+class BuilderType1 extends Builder {
+
+    // returns the builder itself to allow method chaining
+    @Override
+    Builder buildPartA() {
+        product.setPartA("Type1-A");
+        return this;
+    }
+
+    @Override
+    Builder buildPartB() {
+        product.setPartB("Type1-B");
+        return this;
+    }
+}

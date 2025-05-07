@@ -1,0 +1,14 @@
+object pool can be implemented using Queue<Object> (to ensure FIFO)
+We could have used other data structure too depending on the use case
+
+Why Singleton and thread safety are required?
+- Singleton ensures a single instance of the pool
+- Thread safety ensures safe access to the pool from multiple threads, preventing race conditions and ensuring correct object borrowing/returning
+
+
+advantages of object pool? Why a pool?
+- by maintaining a pool we separate out the resouce creation/destruction overhead from frequent requests
+- prevent resource exhaustion by using already created resource object from the pool
+
+disadvantage
+- pool management requires thread safety which is additional overhead

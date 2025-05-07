@@ -1,0 +1,19 @@
+commonly used for undo/redo functionality or implementing snapshots of an object’s state
+aka snapshot DP
+undo/redo is achieved by maintaining history of state change
+
+components of memento DP
+1) Originator: The object whose state needs to be saved and restored
+2) Memento: The object that stores the state of the Originator
+3) Caretaker: The object that requests the state save and restore from the Originator. It holds a reference to the Memento
+
+Without the Memento Pattern: You hand over the raw sensitive data (state) to another person (Caretaker/Client) and hope they handle it correctly
+With the Memento Pattern: You seal the sensitive data in an envelope (Memento) and give the envelope to the person. Only you (Originator) know how to open and use the envelope's contents
+
+Example Problem
+1) Implement undo functionality ( https://github.com/AshuOPragmatikosThrylos/LLD-Problems/tree/main/15.%20Undo%20Redo%20functionality/code/using%20Memento%20DP )
+    - How to know if have to implement using command or memento DP?
+        - Are we undoing actions or reverting to a previous state?
+            - This helps you understand whether the focus is on actions (Command) or state (Memento)
+        - Is there a history of commands or checkpoints?
+            - If actions are tracked as commands, use Command. If checkpoints are saved, use Memento

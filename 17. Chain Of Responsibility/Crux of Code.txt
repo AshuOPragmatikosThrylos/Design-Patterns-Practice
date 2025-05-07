@@ -1,0 +1,9 @@
+used when any of the multiple receivers can handle a request
+if a receiver can't handle it, passes the request to the next in the chain
+
+Works like middleware: each handler decides to process or pass to the next
+
+Example Problems
+1. Design ATM (Amount to withdraw -> Rs 500 dispenser -> Rs 200 -> Rs 100 -> Rs 50 -> Rs 20 -> Rs 10) (Isn't this problem State DP?)
+2. Design Vending Machine (Cold drink -> Pepsi -> Cola -> Thumps Up) (Isn't this problem State DP?)
+3. Design Logger ( https://github.com/AshuOPragmatikosThrylos/LLD-Problems/tree/main/05.%20Logging%20Framework )

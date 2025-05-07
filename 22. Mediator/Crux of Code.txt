@@ -1,0 +1,29 @@
+used when two objects need loose coupling and centralized communication via a mediator
+
+Entities Involved
+1) MediatorInterface - registerParticipant(participant) (internally calls participant.setMediator(this)), sendMessage()
+2) abstract class for participants - sendMessage(), receiveMessage()
+
+- participant has a mediator
+- mediatorImpl maintains list of all participants (so that it can send messages to all of them except the sender)
+- Why use setMediator() instead of passing the mediator in the constructor ? Refer Participant class
+
+
+Example Problems
+1) Online Auction System (TODO) https://youtu.be/5fdKUzfMk4E?feature=shared
+2) Airline Management System (mediator - Air Traffic Controller, participants - planes) (TODO)
+3) Broadcast Chat Application
+4) Parliament
+
+
+how is mediator different from observer
+ - mediator pattern enables two-way communication between objects, where both interact with each other
+ - observer pattern is one-way, where an object notifies others of events
+ - mediator can be combined with observer in a Pub-Sub model to allow bidirectional communication
+ - https://shokrano.medium.com/mediator-vs-observer-19e3b21ef31c
+ - https://refactoring.guru/design-patterns/mediator
+ - https://github.com/dubbha/jsmp/blob/master/hw2-design-patterns/observer-vs-pub-sub-vs-mediator.md
+
+how is mediator different from proxy
+ - mediator: participants know the mediator and its coordinating role
+ - proxy: participants know the proxy but not that it hides the real subject

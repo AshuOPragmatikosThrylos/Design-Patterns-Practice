@@ -1,0 +1,22 @@
+used when have to add new operations following open/closed principle i.e without modifying the existing classes
+
+used to decouple operations from a class
+new operations are encapsulated in a separate visitor class
+
+Entities involved
+- 2 mandatory interfaces - Element (class from which we want to extract out the method) , Visitor (all methods are extracted out from Element to here)
+- Element --> accept(Visitor visitor)
+- Visitor --> visit (ElementImpl1 element1), visit (ElementImpl2 element2)
+
+
+Visitor Pattern uses double dispatch to decouple operations from the elements they operate on
+
+Single Dispatch: Behavior depends on one type (receiver). Ex: element1.accept(visitor1);
+Double Dispatch: Behavior depends on two types (receiver + argument). Ex: visitor.visit(this); // this is also an object - could be element1/element2
+
+Visitor always uses double dispatch, but double dispatch does not always mean the Visitor pattern is being used
+
+how is visitor different from strategy
+- similar code --> obj1.func(obj2)
+- visitor: obj1.accept(visitor) visitor has method implementation for each class
+- startegy: obj1.setStrategy(strategy) strategy has method implementation common for all invokers (obj1, obj2 ..)

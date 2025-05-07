@@ -1,0 +1,30 @@
+used when only specific operations are allowed at any given stage in the flow
+
+Context 
+  - Stores the current state
+  - Accessible globally to determine or modify the current state
+
+State Interface 
+  - Defines all operations across all possible states
+  - Each state class 
+    - implements only its allowed operations 
+    - Unsupported operations: throw exceptions or provide default behavior
+
+Operation Method
+  - Each operation receives `Context` as a parameter: `operation(Context context)`
+  - Enables states to access and modify the context
+
+how is state different from strategy
+  - Both use composition to delegate behavior to helper objects
+  - Strategy: Helper objects are independent and unaware of each other 
+  - State: States can interact, modify context, and transition context's state dynamically
+  - https://youtu.be/Nrwj3gZiuJU?feature=shared
+
+
+Example Problems
+1) Design Vending Machine (TODO)
+2) Design TV (states - on, off)
+
+4:01 Vending Machine diagram  https://github.com/AshuOPragmatikosThrylos/LLD-Problems/tree/main/12.%20Vending%20Machine
+11:41 - 11:43 flow diagram
+31:01 UML diagram

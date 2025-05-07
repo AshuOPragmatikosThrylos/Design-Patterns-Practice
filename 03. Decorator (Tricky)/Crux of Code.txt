@@ -1,0 +1,16 @@
+Entities involved :-
+1. baseInterface/baseClass ---> baseClass implements baseInterface
+       - has operation()
+2. decorator class which 
+      i) "is-a" baseClass ---> i.e decorator implements baseInterface
+      ii) "has-a" baseClass  ---> should actually have a baseInterface instance instead, cuz having a class will make decorator tightly coupled with a secific implementation of baseInterface
+3. Child classes of decorator 
+       - which mandatorily implement their own operation() with addOn operations --> addOn means parent's operation() + something
+       - mandatorily implement => decorator has to be abstract class
+
+
+Why do we need Decorator DP? To prevent class explosion (baseClass(BC) + F1, BC+F1+F2, BC+F1+F2+F3, ...)
+(BC + F1 + F2) + F3: means extends BC + F1 + F2 and then adds a function F3 in the child class
+
+
+https://github.com/AshuOPragmatikosThrylos/LLD-Problems/tree/main/13.%20Coffee%20Machine

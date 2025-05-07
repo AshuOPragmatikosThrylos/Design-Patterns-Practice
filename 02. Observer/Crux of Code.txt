@@ -1,0 +1,4 @@
+Since 1 Observable can be observed by many Observers
+and since 1 Observer can observe many Observables
+
+Implement Observable-Observer story using interfaces for both so that can have many implementations of each

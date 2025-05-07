@@ -1,0 +1,17 @@
+1) https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
+2) https://blog.algomaster.io/p/solid-principles-explained-with-code
+
+Open Closed Principle --> 
+1) https://youtube.com/shorts/J9jSaKTiHnY?feature=shared
+2) https://youtu.be/IFe6gdNUDAg?feature=shared
+
+LSP --> 
+parent object references can contain child object
+so we should always make sure if someone does this intentionally or by mistake 
+nothing should break i.e child should be able to do all those things which parent was able to do
+Why is there a chance of breaking? cuz child class can override method of the parent
+
+To fix the violation, we can reconsider the inheritance relationship
+https://youtu.be/129QkkXUHeQ?feature=shared
+
+Dependency Inversion --> class should depend on interface/abstract class rather than concrete class

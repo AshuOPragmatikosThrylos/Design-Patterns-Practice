@@ -1,0 +1,26 @@
+used when:
+ - subclasses have to implement their own function
+   but
+   must follow certain steps in a specific order
+
+ - abstract class
+ - final parent function
+ - default step implementation provided in the abstract class itself
+ - steps/subfunctions can be overriden 
+
+{
+  // template method
+    public final void execute() {
+        step1();
+        step2();
+        step3();
+    }
+
+    protected void step1() {
+    }
+    protected void step2() {
+    }
+    protected void step3() {
+    }
+
+}

@@ -1,0 +1,17 @@
+used when we have to reduce the memory usage by sharing data among multiple objects
+
+aka Cache design pattern
+
+How to convert and existing class to a flyweight class?
+1) remove extrinsic data; keep only intrinsic data in the class (resulting object is the flyweight)
+2) make the flyweight class immutable
+    - to ensure these properties remain unchanged even in multi-threaded environment
+    - make the intrinsic properties private; have only getters and no setters
+3) pass extrinsic data as method parameters and not in constructors
+4) cache flyweight objects after creation in a factory; reuse as needed
+
+intrinsic --> same across all objects
+extrinsic --> unique to each object
+
+Example Problems
+1) Word Processor/ Text Editor ( https://github.com/AshuOPragmatikosThrylos/LLD-Problems/tree/main/14.%20Text%20Editor%20or%20Word%20Processor )
